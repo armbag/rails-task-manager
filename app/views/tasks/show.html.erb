@@ -1,0 +1,17 @@
+<h1><%= @task.title %></h1>
+
+<% if @task.completed %>
+  <p><%= 'Done' %></p>
+  <% else %>
+  <p><%= 'Not Done' %></p>
+  <% end %>
+
+
+<h2><%= @task.details %></h2>
+<br>
+<%= link_to raw('<button class="button-edit" type="button">Edit Task</button>'
+), edit_task_path %>
+<br>
+<br>
+<br>
+<%= link_to 'back to home', root_path %>
